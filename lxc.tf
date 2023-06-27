@@ -26,7 +26,7 @@ resource "proxmox_lxc" "lxc-terraform" {
         ip = "dhcp"
         ip6 = "dhcp"
     }
-    ostemplate = "local:vztmpl/ubuntu-22.04-standard_20.04-1_amd64.tar.gz"
+    ostemplate = "local:vztmpl/ubuntu-22.04-standard_20.04-1_amd64.tar.zst"
     password = "rootroot"
     pool = ""
     target_node = "skynet"
@@ -34,7 +34,7 @@ resource "proxmox_lxc" "lxc-terraform" {
     start = true
     memory = "1024"
     cores = "1"
-    
+
 
     rootfs {
     storage = "local-lvm"
