@@ -31,6 +31,10 @@ resource "proxmox_lxc" "lxc-terraform" {
     pool = ""
     target_node = "skynet"
     unprivileged = true
+    start = true
+    memory = "1024"
+    cores = "1"
+    
 
     rootfs {
     storage = "local-lvm"
