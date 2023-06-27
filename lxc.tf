@@ -10,16 +10,16 @@ terraform {
 provider "proxmox" {
     pm_tls_insecure = true
     pm_api_url = "https://192.168.1.7:8006/api2/json"
-    pm_password = "lol911"
+    pm_password = "***"
     pm_user = "terraform-prov@pve"
     pm_otp = ""
 }
 
-resource "proxmox_lxc" "lxc-test" {
+resource "proxmox_lxc" "lxc-terraform" {
     features {
         nesting = true
     }
-    hostname = "terraform-new-container"
+    hostname = "django-box"
     network {
         name = "eth0"
         bridge = "vmbr0"
